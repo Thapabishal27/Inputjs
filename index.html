@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>html project</title>
+  </head>
+  <style>
+    body {
+      background-color: white;
+      text-align: center;
+    }
+
+    #input {
+      font-size: 18px;
+      padding: 12px;
+      background: wheat;
+      color: rgb(0, 0, 0);
+      font-family: monospace;
+      border-radius: 5px;
+      border-style: none;
+      margin-top: 100px;
+    }
+
+    #submit {
+      padding: 5px 30px;
+      margin-left: 20px;
+      font-family: monospace;
+      font-size: 14px;
+      margin-top: 100px;
+    }
+
+    #input-text {
+      font-size: 52px;
+      font-family: monospace;
+      margin-top: 32px;
+      font-weight: bold;
+      color: blue;
+    }
+  </style>
+  <body>
+    <input id="input" type="text" placeholder="Type anything" />
+    <input type="submit" id="submit" value="Submit" />
+    <h2 id="input-text"></h2>
+
+    <script>
+      document.getElementById("submit").onclick = function () {
+        let text = document.getElementById("input");
+        let inputtext = text.value;
+        document.getElementById("input-text").innerHTML = inputtext;
+      };
+    </script>
+  </body>
+</html>
